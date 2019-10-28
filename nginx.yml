@@ -1,0 +1,9 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+    - name: ensure nginx is at the latest version
+      package: name=nginx state=present
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
